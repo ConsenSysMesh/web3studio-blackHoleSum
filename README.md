@@ -7,7 +7,7 @@ The intention is to implement this on Ethereum.
 
 As far as I can see, the following components need to be built:  
 
-* We will need to do the computations for encryption and decryption. All computations are done using type-3 asymmetric elliptic curve pairings. The pairing chosen must work in two groups where the external diffie hellman assumption holds, as this protocol is secure under the SXDH assumption. The optimal ate pairing over a Barreto-Naehrig curve is one such candidate. [Adjoint has a library in Haskell](https://github.com/adjoint-io/pairing), implementing a BN-128 curve that seems like a good candidate to use. 
+* We will need to do the computations for encryption and decryption. All computations are done using type-3 asymmetric elliptic curve pairings. The pairing chosen must work in two groups where the external Diffie-Hellman assumption holds, as this protocol is secure under the SXDH assumption. The Optimal Ate Pairing over a Barreto-Naehrig curve is one such candidate. [Adjoint has a library in Haskell](https://github.com/adjoint-io/pairing), implementing a BN-128 curve that seems like a good candidate to use. 
 * Once cipher texts and decryption keys are generated, they need to actually be sent to other participants. This will be implemented on Ethereum, so we need a library that wraps JSON-RPC. 
 * The architecture requires a multi party computation setup  phase. For this, we will need the ability to encrypt values with ECIES. [This is a library in Haskell for ECIES](http://hackage.haskell.org/package/cryptonite-0.25/docs/Crypto-PubKey-ECIES.html)
 * Bulletproofs will be needed, so that inputs can be verified. [Bulletproof library in haskell will be used for this](https://github.com/adjoint-io/bulletproofs)
