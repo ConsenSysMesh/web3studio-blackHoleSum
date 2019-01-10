@@ -1,7 +1,7 @@
 ## black-hole-sum
 black hole sum is a privacy preserving p2p rating system. This is the repo where it's implementation will live.
 
-The architecture is described [in this medium post](medium link). It is based off of this protocol: [Decentralized Multi-Client Functional Encryption](https://eprint.iacr.org/2017/989.pdf)
+The architecture is described [in this medium post](medium link). It is based off of this protocol: [Decentralized Multi-Client Functional Encryption For Inner Product](https://eprint.iacr.org/2017/989.pdf)
 
 The intention is to implement this on Ethereum. 
 
